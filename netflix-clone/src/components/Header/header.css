@@ -1,0 +1,52 @@
+/* Outer container remains mostly unchanged */
+.header_outer_container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  height: 10vh;
+  color: white;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+/* Center the header content and limit its max-width */
+.header_container {
+  width: 100%;
+  max-width: 1200px;  /* Adjust as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;  /* Provides some breathing room on smaller screens */
+}
+
+/* Header left: remove over-extended width and use flex gap/margins */
+.header_left ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Remove width: 140%; */
+  gap: 20px; /* Space out list items */
+}
+
+/* Optional: add margin to individual list items if more control is needed */
+/*
+.header_left li {
+  margin-right: 20px;
+}
+*/
+
+/* Header right: remove over-extended width and use flex spacing */
+.header_right ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Remove width: 150%; */
+  gap: 20px; /* Space out icons */
+}
