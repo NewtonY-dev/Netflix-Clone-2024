@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# Netflix Clone 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+A web application built using React that clones the basic user interface and Browse features of Netflix. It fetches movie data from The Movie Database (TMDB) API and allows users to view movie trailers using react-youtube.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* Displays movie categories like Trending, Originals, Top Rated, etc..
+* Fetches and displays movie posters.
+* Shows a banner with a featured movie.
+* Allows playing movie trailers directly within the app using YouTube.
+* Built with functional components and React Hooks (`useState`, `useEffect`).
+* Uses Axios for making HTTP requests to the TMDB API.
+* Includes basic components like Header, Footer, Banner, and Rows.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **[React](https://react.dev/learn)**: A JavaScript library for building user interfaces.
+* **[Axios](https://www.npmjs.com/package/axios)**: Promise-based HTTP client for the browser and Node.js.
+* **[Material UI (MUI)](https://mui.com/material-ui/getting-started/learn/)**: React component library for faster and simpler web development. Used for Icons.
+* **[react-youtube](https://www.npmjs.com/package/react-youtube)**: Simple React component acting as a thin layer over the YouTube IFrame Player API.
+* **[movie-trailer](https://www.npmjs.com/package/movie-trailer)**: Module to find YouTube trailers for movies and TV shows.
+* **[The Movie Database (TMDB) API](https://developer.themoviedb.org/v4/reference/intro/getting-started)**: Used to fetch movie data.
 
-### `npm test`
+## Directory Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+netflix-clone/
+├── README.md                   # Original README from Create React App
+├── package-lock.json           # Exact dependency versions
+├── package.json                # Project dependencies and scripts
+├── .gitignore                  # Files ignored by Git
+├── public/                     # Public assets
+│   ├── index.html              # Main HTML file
+│   ├── manifest.json           # Web app manifest
+│   └── robots.txt              # Instructions for web crawlers
+└── src/                        # Main application source code
+├── App.css                 # Main App component styles
+├── App.js                  # Root React component
+├── index.css               # Global styles
+├── index.js                # Application entry point
+├── assets/                 # Static assets like images
+│   └── images/             # Image files (e.g., NetflixLogo.png)
+├── components/             # Reusable UI components
+│   ├── Banner/             # Banner component for featured content
+│   │   ├── banner.css      #
+│   │   └── Banner.js       #
+│   ├── Footer/             # Footer component
+│   │   ├── footer.css      #
+│   │   └── Footer.js       #
+│   ├── Header/             # Header/Navigation component
+│   │   ├── header.css      #
+│   │   └── Header.js       #
+│   └── Rows/               # Components for displaying movie rows
+│       ├── Row/            # Single movie row component
+│       │   ├── row.css     #
+│       │   └── Row.js      #
+│       └── RowList/        # Component to display multiple rows
+│           └── RowList.js  #
+├── pages/                  # Page-level components
+│   └── Home/               # Home page component
+│       └── Home.js         #
+└── utils/                  # Utility functions/modules
+├── axios.js            # Axios instance configuration
+└── requests.js         # TMDB API request URLs
+```
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/NewtonY-dev/Netflix-Clone-2024.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd netflix-clone
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    ```
+   
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **Run in Development Mode:**
+    ```bash
+    npm start
+    ```
+   
+    This will open the app at [http://localhost:3000](http://localhost:3000) in your browser. The page reloads when you make edits.
 
-### `npm run eject`
+* **Build for Production:**
+    ```bash
+    npm run build
+    ```
+   
+    This bundles the app into the `build` folder, optimized for production.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* **Run Tests:**
+    ```bash
+    npm test
+    ```
+   
+    Launches the test runner in interactive watch mode.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API Reference
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* This project uses **[The Movie Database (TMDB) API](https://developer.themoviedb.org/v4/reference/intro/getting-started)** to fetch movie and TV show data.
+* An API key from TMDB is required. It should be stored in a `.env` file in the project root with the variable name `REACT_APP_API_KEY`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+MIT License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Copyright (c) 2025 Newton Yetsedaw
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software 
+without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the following conditions:
 
-### Code Splitting
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
